@@ -110,7 +110,7 @@ public class OpenStackMod
 
 	@EventHandler
 	public static void postInit(FMLPostInitializationEvent event) {
-		String server = "127.0.0.1:6446";
+		String server = "minecraft-osmiddleware:6446"; // Setup your /etc/hosts
 		try {
 			BufferedReader br = new BufferedReader(new FileReader("openstackmod_config.txt"));
 			server = br.readLine();
