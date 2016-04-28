@@ -38,6 +38,8 @@ if __name__ == '__main__':
             helper.PROJECT = line.split('=')[1]
         if line.startswith("AUTHURL"):
             helper.AUTHURL = line.split('=')[1]
+	if line.startswith("REGION_NAME"):
+            helper.REGION_NAME = line.split('=')[1]
     f.close()
     Handler = MyHandler
     httpd = SocketServer.TCPServer((HOST_NAME, PORT_NUMBER), Handler)

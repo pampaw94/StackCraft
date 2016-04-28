@@ -6,13 +6,15 @@ USERNAME = "admin"
 PASSWORD = "Passw0rd"
 PROJECT = "admin"
 AUTHURL = "http://10.250.168.3:5000/v2.0"
+REGION_NAME = "regionOne"
 
 def GetNova():
     nova = client.Client(VERSION,
                          USERNAME,
                          PASSWORD,
                          PROJECT,
-                         AUTHURL)
+                         AUTHURL,
+			 region_name=REGION_NAME)
     return nova
 
 class Helper:
